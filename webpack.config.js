@@ -1,70 +1,37 @@
-/**
- * @file webpack编译配置
- * @author v_gengsiyu
- * @date 2019-09-01
- * */
-const path = require('path');
-const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-let publicPath = path.resolve(__dirname, './output/');
-
-function resolve(dir) {
-    return path.join(__dirname, dir);
-}
-
-
-let plugins = [
-    new ExtractTextPlugin({
-        filename: '../css/[name].min.css',
-        allChunks: true
-    }),
-    new webpack.DefinePlugin({
-        'process.env.NODE_ENV': JSON.stringify('development')
-    })
-    //new HardSourceWebpackPlugin()
-];
+var path = require('path'),
+    webpack = require('webpack'),
+    HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
-    entry: {
-        main: './resources/js/entry.js'
+    devServer: {
+        contentBase: "./js",
+        open: true,
+        host: "http://ump-dev-gengsiyu.bcc-bdbl.baidu.com/",
+        port: "8870"
     },
-    output: {
-        path: path.resolve(publicPath, 'js'),
-        publicPath: '/js/',
-        filename: '[name].min.js'
-    },
-    module: {
-        rules: [
-            {
-                test: /\.css$/,
-                use: ExtractTextPlugin.extract({
-                    use: ['css-loader?minimize', 'autoprefixer-loader'],
-                    fallback: 'style-loader'
-                })
-            },
-            {
-                test: /\.less/,
-                use: ExtractTextPlugin.extract({
-                    use: ['css-loader?minimize', 'autoprefixer-loader', 'less-loader'],
-                    fallback: 'style-loader'
-                })
-            },
-            {
-                exclude: /node_modules/,
-                test: /\.(jpg|png)\??.*$/,
-                loader: 'file-loader?name=[name].[ext]&publicPath=./img/&outputPath=../css/img/'
-            },
-            {
-                test: /\.(gif|woff|svg|eot|ttf)\??.*$/,
-                loader: 'url-loader?limit=1024'
-            }
-        ]
-    },
-    resolve: {
-        extensions: ['.js'],
-        alias: {
-            '@': resolve('./resources/js'),
-            'env': resolve('./resources/js/env.js')
-        }
-    },
-    plugins: plugins
+    // entry: ['webpack/hot/dev-server', path.resolve(__dirname, './js/entry.js')],
+    // output: {
+    //     path: path.resolve(__dirname, './js/entry.js'),
+    //     filename: 'bundle.js'
+    // },
+    // devServer: {
+    //   inline: true,
+    //   port: 8099
+    // },
+    // module: {
+    //     loaders: [{
+    //         test: /\.js?$/,
+    //         exclude: /(node_modules|bower_components)/,
+    //         loader: 'babel',
+    //         query: {
+    //             presets: ['es2015', 'react']
+    //         }
+    //
+    //     }]
+    // },
+    // plugins: [
+    //     new HtmlWebpackPlugin({
+    //         template: './index.html'
+    //     }),
+    //     new webpack.HotModuleReplacementPlugin()
+    // ]
 };

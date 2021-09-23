@@ -1,0 +1,25 @@
+.anmite {
+    background: #f0f8ff;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.item {
+    width: 24.5%;
+    background: #000;
+    border: 1px solid #172534;
+    text-align: center;
+    font-size: 80px;
+    font-weight: bolder;
+    flex-shrink: 0;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.curAuthor {
+    text-align: center;
+    font-size: 40px;
+}

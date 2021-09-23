@@ -1,33 +1,26 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>OMS</title>
-    <meta charset="UTF-8">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
-    <link rel="stylesheet" href="http://uf.baidu.com/v/0.4.0/weTheme.css?v=0.3.0.10">
+    <meta charset="utf-8">
+    <title>时间管理大师</title>
+    <link rel="shortcut icon" href="logo/manage.png" type="image/x-icon">
+    <!--<link rel="stylesheet" href="http://uf.baidu.com/v/0.3.0/weTheme.css?v=0.3.0.10">-->
+    <link rel="stylesheet" href="assets/weTheme.css">
+
+    <!-- 引线上版本 -->
+    <script src="assets/dll.min.js"></script>
+    <script src="assets/antd.min.js"></script>
+    <script src="assets/uf.min.js"></script>
+
+    <!-- 基础样式 -->
+    <link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
-<div id="oms-app"></div>
-
-<!-- 引线上版本 -->
-<script src="http://uf.baidu.com/v/0.4.0/dll.js"></script>
-<script src="http://uf.baidu.com/v/0.4.0/antd.js"></script>
-<script src="http://uf.baidu.com/v/0.4.0/uf.js"></script>
-
-<!-- 引开发版本 -->
-<!--<script src="http://antd.uf.baidu.com:8000/uf/dist/dev/uf.js"></script>-->
-<!--<script src="http://antd.uf.baidu.com:8099/v/dev/uf.js"></script>-->
-
-
-<!--刷新时更换版本-->
+<div id="app-cmp-app"></div>
+</div>
 <script>
-document.write('<link rel="stylesheet" type="text/css" href="output/css/main.min.css?v='
-    + new Date().getTime() + '">');
-document.write('<script type="text/javascript" src="output/js/main.min.js?v='
-    + new Date().getTime() + '"><\/script>');
+window._env = 'prod';
 </script>
+<script src="js/entry.js"></script>
 </body>
 </html>

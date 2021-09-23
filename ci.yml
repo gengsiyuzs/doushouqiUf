@@ -11,5 +11,5 @@ Profiles:
     - profile:
       name : opera
       env : cmc_standard
-      command: rm -rf output && mkdir -p output/webroot && cp -r -t output/webroot dist/css dist/js dist/assets dist/index.html dist/print.html
+      command: rm -rf output && mkdir -p output/webroot && cp -r -t output/webroot css js less logo indexbak.html uf.config.js
       release : true
