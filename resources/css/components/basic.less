@@ -1,0 +1,171 @@
+/**
+* @file 修改基础样式
+*/
+
+/* 响应式 */
+@media (max-width: 2000px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 1400px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1000px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+#oms-app {
+    width: 100%;
+    height: 100%;
+}
+
+.ant-layout-header, .ant-card-wider-padding .ant-card-body {
+    padding: 0;
+}
+
+// 选中侧边栏颜色
+.ant-menu.ant-menu-dark .ant-menu-item-selected {
+    background: #526098;
+}
+
+// primary按钮颜色
+.ant-btn-primary {
+    background: #3472f1;
+}
+
+// tabs页title加粗
+.ant-tabs-nav .ant-tabs-tab-active {
+    color: #3472f1;
+    font-weight: bold;
+}
+
+.ant-tabs-nav {
+    font-weight: bold;
+}
+
+// table不压缩行
+
+/*.ant-table-tbody > tr > td,
+.ant-table-thead > tr > th {
+    white-space: nowrap;
+}
+
+.ant-table-scroll {
+    overflow: initial;
+    overflow-x: initial;
+}
+
+.ant-table-fixed-right {
+    display: none;
+}*/
+
+
+::-webkit-scrollbar-track {
+    border-radius: 0;
+    background: #e1e1e1;
+    position: absolute
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    position: absolute
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #aeaeae;
+    position: absolute
+}
+
+::-webkit-scrollbar-thumb:hover {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .4);
+    background-color: rgba(85, 85, 85, 0.4);
+}
+
+
+.menu_total {
+    font-size: 1.1rem;
+    width: 100%;
+    height: 60px;
+    overflow: hidden;
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .12), 0 1px 8px 0 rgba(0, 0, 0, .2);
+
+    .menu_menu {
+        border: none;
+        font-size: 14px;
+        font-weight: lighter;
+        height: 100%;
+        float: left;
+        background: #3472f1;
+        line-height: 60px;
+    }
+
+    .owner {
+        width: 200px;
+        height: 60px;
+        line-height: 60px;
+        float: left;
+        background: #3472f1;
+        text-align: center;
+        font-size: 14px;
+
+        a {
+            color: #fff !important;
+        }
+    }
+}
+
+.ant-breadcrumb {
+    background: none;
+}
+
+// 背景颜色
+
+.bgColor {
+    background: #ff7744;
+}
+
+// title 颜色块
+.colorBefore {
+    position: relative;
+
+    &::before {
+        content: '';
+        width: 4px;
+        height: 20px;
+        background: #108ee9;
+        border-radius: 2px;
+        position: absolute;
+        left: -10px;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+}
+
+// 水平垂直居中
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+// 按钮加圆角
+button, .ant-btn {
+    border-radius: 5px;
+    //border-color: transparent;
+}
+
+// 取消textarea最大宽度限制
+textarea.ant-input {
+    max-width: none;
+}

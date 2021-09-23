@@ -1,0 +1,26 @@
+{
+    "name": "oms-ui",
+    "version": "0.0.02",
+    "description": "oms",
+    "main": "webpack.config.js",
+    "scripts": {
+        "start": "webpack --watch",
+        "build": "webpack --watch --config webpack.prod.config.js",
+        "online": "npm run build & npm start"
+    },
+    "devDependencies": {
+        "autoprefixer-loader": "^2.0.0",
+        "css-loader": "^0.23.1",
+        "extract-text-webpack-plugin": "^2.1.2",
+        "file-loader": "^4.2.0",
+        "hard-source-webpack-plugin": "^0.13.1",
+        "jquery": "^3.3.1",
+        "less": "^2.7.1",
+        "less-loader": "^2.2.3",
+        "style-loader": "^0.13.1",
+        "webpack": "^2.7.0"
+    },
+    "keywords": [],
+    "author": "gengsiyu",
+    "license": "UNLICENSED"
+}

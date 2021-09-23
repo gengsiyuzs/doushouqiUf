@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OMS</title>
+    <meta charset="UTF-8">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" href="assets/img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="http://uf.baidu.com/v/0.4.0/weTheme.css?v=0.3.0.10">
+</head>
+<body>
+<div id="oms-app"></div>
+
+<!-- 引线上版本 -->
+<script src="http://uf.baidu.com/v/0.4.0/dll.js"></script>
+<script src="http://uf.baidu.com/v/0.4.0/antd.js"></script>
+<script src="http://uf.baidu.com/v/0.4.0/uf.js"></script>
+
+<!-- 引开发版本 -->
+<!--<script src="http://antd.uf.baidu.com:8000/uf/dist/dev/uf.js"></script>-->
+<!--<script src="http://antd.uf.baidu.com:8099/v/dev/uf.js"></script>-->
+
+
+<!--刷新时更换版本-->
+<script>
+document.write('<link rel="stylesheet" type="text/css" href="output/css/main.min.css?v='
+    + new Date().getTime() + '">');
+document.write('<script type="text/javascript" src="output/js/main.min.js?v='
+    + new Date().getTime() + '"><\/script>');
+</script>
+</body>
+</html>
